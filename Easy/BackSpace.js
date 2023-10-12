@@ -16,4 +16,21 @@ const BackSpace = function (s1, s2) {
   return compare(s1) === compare(s2);
 };
 
-console.log(BackSpace("ab#c", "ad#c"));
+var input = [1, 5, 7, "one", "five", 5, 7, "one"];
+
+const example = function (arr) {
+  const unique = {};
+  const uniqueArray = arr.filter((item) => {
+    if (!unique[item]) {
+      unique[item] = true;
+      return true;
+    }
+    return false;
+  });
+
+  const finalArray = uniqueArray.filter((item) => item !== "");
+
+  return finalArray;
+};
+
+console.log(example(input));
